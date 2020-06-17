@@ -1,0 +1,399 @@
+/* Global */
+
+*{
+
+    margin: 0;
+    padding: 0;
+    font-family: Nunito, sans-serif;
+
+}
+
+ul{
+
+    list-style-type:none;
+
+}
+
+body{
+
+    background-image: url(../assets/winter.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    background-size: cover;
+
+    background-color: #fafafa;
+
+    background-attachment: fixed;
+
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* navigation */
+
+nav{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+
+}
+
+ .close,.menu {
+
+    display: none;
+
+}
+
+.logo-txt{
+
+    font-size: large;
+    font-weight: bold;
+}
+
+.logo{
+
+    font-size: xxx-large;
+
+}
+
+.nav-list{
+
+    display: flex;
+    justify-content: space-evenly;
+    color: dimgray;
+
+    transition: width 0.8s;
+
+}
+
+.nav-item{
+
+    margin: 0 1rem;
+
+    font-size: x-large;
+
+    cursor: pointer;
+
+}
+
+.nav-item:hover{
+
+    font-weight: bold;
+
+}
+
+.nav-item-active{
+
+    margin: 0 1rem;
+
+    font-size: x-large;
+
+   font-weight: bold;
+
+}
+
+.search{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    height: 1rem;
+
+    width: 16%;
+
+    padding: 0.7rem;
+
+    border: solid darkslategray 1px;
+
+    border-radius: 12px;
+
+    color: darkslategray;
+
+    
+
+    
+
+}
+
+.search input{
+
+    flex: 2;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: bolder;
+
+}
+
+.search ion-icon{
+
+    margin-left: 0.4rem;
+    font-weight: bolder;
+    font-size: 1.4rem;
+
+    transition: font-size 0.3s ease-in-out;
+
+    cursor: pointer;
+    
+}
+
+.search ion-icon:hover{
+
+    
+    font-size: 1.8rem;
+    
+}
+
+
+/* main section */
+
+.video{
+
+    grid-template-columns: repeat(4, 1fr);
+
+    justify-self: center;
+
+    margin: 4rem;
+
+    position: relative;
+
+    height: 15rem;
+
+    width: 15rem;
+
+    transition:  color  .5s ease-in-out;
+
+    background-image: linear-gradient(to bottom right, crimson, rgba(199, 149, 149, 0.836));
+
+    border-radius: 15px;
+
+    color: #fafafa;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+
+}
+
+.video:hover{
+
+    color: bisque; 
+
+}
+
+.video ion-icon{
+
+
+    font-size: 10vh;
+
+    margin-bottom: 1rem;
+
+}
+
+#vids{
+
+    display: grid;
+
+    align-items: center;
+
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+
+
+}
+
+/* floating action button */
+
+#fab{
+
+    position: fixed;
+
+    bottom: 40px;
+
+    right: 30px;
+
+    height: 60px;
+
+    width: 60px;
+
+    border-radius: 100%;
+
+    background-color: darkslategray;
+
+    color: #fafafa;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow: black 2px 2px 8px;
+
+    transition: background-color 0.5s ease-in-out, height 0.2s ease-in-out, width 0.2s ease-in-out; 
+
+}
+
+#fab:hover{
+
+    background-color: goldenrod;
+
+}
+
+#fab:active{
+
+    height: 50px;
+
+    width: 50px;
+
+}
+
+#fab ion-icon{
+
+    font-size: 2rem;
+
+    transform: rotate(-10deg);
+
+
+}
+
+/* footer */
+
+footer{
+
+    margin-top: 2rem;
+
+    height: 3rem;
+
+    background-color: cadetblue;
+
+    color: #fafafa;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+footer p{
+
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: medium;
+
+}
+
+/* media queries */
+
+@media screen and (max-width: 700px){
+
+
+    .nav-list{
+
+        display: none;
+
+    }
+
+    .menu{
+
+        display: inline;
+
+        font-size: xxx-large;
+
+        color: darkslategray;
+
+        border: solid darkslategray 1px;
+
+        border-radius: 6px;
+
+        cursor: pointer;
+
+        transition-duration: 0.6s;
+
+        outline: none;
+
+    }
+
+    .menu:hover{
+
+        color: #fafafa;
+
+        background-color: darkslategray;
+
+    }
+
+    .menu:active{
+
+        color: #fafafa;
+
+        background-color: ghostwhite;
+
+    }
+
+    .nav-list{
+
+        position: fixed;
+
+        top: 0;
+
+        right: 0;
+
+        z-index: 100;
+    
+        height: 0;
+    
+        width: 0;
+
+        display: flex;
+    
+        background-color: khaki;
+    
+        color: #fafafa;
+    
+        flex-direction: column;
+    
+        justify-content: space-evenly;
+    
+        align-items: center;
+    
+    }
+
+    .nav-item, .nav-item-active{
+
+        color: transparent;
+
+    }
+
+    .close{
+
+        font-size: 5rem;
+
+
+    }
+
+    .search{
+
+        display: none;
+
+    }
+
+}
