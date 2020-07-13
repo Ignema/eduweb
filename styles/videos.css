@@ -291,6 +291,10 @@ footer{
 
     align-items: center;
 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
 }
 
 footer p{

@@ -1,3 +1,4 @@
+
 const menu = document.getElementById("menu");
 
 const nav = document.getElementById("nav-list");
@@ -46,23 +47,45 @@ close.addEventListener("click",()=>{
 
 vids = document.getElementById("vids");
 
-for(let i=0; i<20; i++){
+let videos = [];
 
-    let icon = document.createElement("ion-icon");
+const url='http://localhost:3000/api/v1/videos';
 
-    icon.setAttribute('name',"play-circle");
+async function getVideos(){
 
-    let inner = document.createElement("p");
+ let response = await fetch(url);
 
-    inner.innerHTML = `Video Sample #${i+2}`;
+        response.json().then((data)=>{
 
-    let elem = document.createElement("li");
-    elem.className="video";
+            videos=data;
 
-    elem.appendChild(icon);
-    elem.appendChild(inner);
-   
-//    = document.getElementsByClassName('video').cloneNode( true )[0];
-    elem.setAttribute('id', i);
-    vids.appendChild(elem);
-}
+            index = 2;
+
+            for(video of videos){
+
+                let icon = document.createElement("ion-icon");
+                icon.setAttribute('name',"play-circle");
+            
+                let inner = document.createElement("p");
+                inner.innerHTML = video.title;
+            
+                let elem = document.createElement("li");
+            
+                elem.className="video";
+                
+                elem.appendChild(icon);
+                elem.appendChild(inner);
+            
+                elem.setAttribute('id', index);
+            
+                vids.appendChild(elem);
+
+                index++;
+            }
+
+    });
+
+ }
+
+getVideos();
+
