@@ -3,7 +3,7 @@ const express = require("express");
 
 //let path = require("path");
 
-const crypto = require("crypto");
+const bcrypt = require("bcrypt");
 
 const Video = require("./video");
 const mongoose = require('mongoose');
@@ -12,6 +12,8 @@ const app = express();
 
 
 app.use(express.static(__dirname));
+
+app.use(express.urlencoded({extended: false}));
 
 
 app.get("/",(req,res)=>{
@@ -51,6 +53,21 @@ app.get("/api/v1/videos",(req,res)=>{
 app.get("/admin",(req,res)=>{
 
     res.sendFile( __dirname + "/pages/admin.html");
+
+});
+
+app.post("/admin", (req,res)=>{
+
+   if(req.body.username === "admin" && req.body.password === "admin"){
+
+        res.send("Logged in")
+
+   }else{
+
+    res.redirect("/admin")
+
+   }
+
 
 });
 
