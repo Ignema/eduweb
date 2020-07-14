@@ -60,7 +60,7 @@ app.post("/admin", (req,res)=>{
 
    if(req.body.username === "admin" && req.body.password === "admin"){
 
-        res.send("Logged in")
+        res.redirect("/panel")
 
    }else{
 
@@ -70,5 +70,11 @@ app.post("/admin", (req,res)=>{
 
 
 });
+
+app.get("/panel", (req,res)=>{
+
+    res.sendFile( __dirname + "/pages/panel.html");
+ 
+ });
 
 app.listen(3000);

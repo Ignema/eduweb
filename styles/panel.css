@@ -1,0 +1,185 @@
+
+
+::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+::-webkit-scrollbar-track {
+    background: #34495e;
+  }
+
+::-webkit-scrollbar-thumb {
+    background: #2980b9;
+  }
+
+body{
+
+    background-image: url(../assets/material.jpg);
+
+    background-size: cover;
+
+    overflow: hidden;
+
+}
+
+
+#head{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 2rem;
+
+
+}
+
+#menu{
+
+    display: flex;
+
+    align-items: center;
+}
+
+.menu{
+
+    color: #fafafa;
+
+    font-size: 3rem;
+
+    background-color: #64307A;
+
+    padding: 1rem;
+
+    cursor: pointer;
+
+}
+
+#title{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+padding-left: 1rem;
+padding-right: 1rem;
+
+height: 5rem;
+
+background-color: #8e44ad;
+color: #fafafa;
+
+}
+
+.button{
+
+    font-size: 3rem;
+    padding: 1rem;
+
+    margin-left: 1rem;
+
+    border-radius: 12cm;
+
+    color: #fafafa;
+
+    cursor: pointer;
+
+}
+
+#videos{
+
+   background-color: #3498db;
+
+    margin: 0 2rem 0 2rem;
+
+    height: 50rem;
+
+    padding: 2rem;
+
+    overflow-y: scroll;
+
+}
+
+#video{
+
+    display: flex;
+
+    text-align: center;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background-color: #fafafa;
+
+    height: 7rem;
+
+    margin-bottom: 2rem;
+
+    border-radius: 25px;
+
+    box-shadow: -4px 4px 20px 0px #34495e;
+}
+
+#thumbnail{
+
+    background-color: #34495e;
+
+    height: 7rem;
+
+    width: 10rem;
+
+    cursor: pointer;
+
+}
+
+/* #info{
+
+    display: flex;
+
+    text-align: center;
+
+    align-items: center;
+
+} */
+
+#video-title,.bar,#file-type,#storage,#length,#date{
+
+    margin:0 1rem 0 1rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    color: #34495e;
+
+}
+
+#video-title{
+
+    font-size: 2.1rem;
+
+}
+
+#storage{
+
+margin-top: 1rem;
+
+}
+
+#play,#close{
+
+
+    color: #34495e;
+
+    font-size: 4rem;
+
+    cursor: pointer;
+
+}
+
+#close{
+
+margin-right: 1rem;
+
+}
