@@ -1,7 +1,7 @@
 
 
 ::-webkit-scrollbar {
-    width: 1rem;
+    width: .7rem;
   }
 
 ::-webkit-scrollbar-track {
@@ -55,6 +55,26 @@ body{
 
 }
 
+.menu:hover{
+
+    color:  #64307A;
+
+    background-color: #fafafa;
+
+    transition: color, background-color .1s ease-in;
+
+}
+
+.menu:active{
+
+    color: #fafafa;
+
+    background-color: #64307A;
+
+    transition: color, background-color .1s ease-in;
+
+}
+
 #title{
 
     font-family: Arial, Helvetica, sans-serif;
@@ -88,6 +108,24 @@ color: #fafafa;
 
 }
 
+.button:hover{
+
+    padding:  1.05rem;
+
+    transition: padding .1s ease-in;
+
+
+}
+
+.button:active{
+
+    padding: 0.95rem;
+
+    transition: padding .1s ease-in;
+
+
+}
+
 #videos{
 
    background-color: #3498db;
@@ -99,6 +137,8 @@ color: #fafafa;
     padding: 2rem;
 
     overflow-y: scroll;
+
+    border-radius: 12px;
 
 }
 
@@ -125,13 +165,49 @@ color: #fafafa;
 
 #thumbnail{
 
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
     background-color: #34495e;
+
+    border-radius: 25px 0 0 25px;
 
     height: 7rem;
 
     width: 10rem;
 
     cursor: pointer;
+
+    font-size: 4rem;
+
+    color: rgba(0, 0, 0,0);
+
+}
+
+#thumbnail:hover{
+
+    opacity: 0.5;
+
+    color: white;
+
+    transition: opacity, color .1s ease-in;
+
+
+}
+
+#thumbnail:active{
+
+    opacity: 1;
+
+    background-color: white;
+
+    color: #34495e;
+
+    transition: opacity, color, background-color .1s ease-in;
+
 
 }
 
@@ -181,5 +257,21 @@ margin-top: 1rem;
 #close{
 
 margin-right: 1rem;
+
+}
+
+#play:hover,#close:hover{
+
+    color: #3498db;
+
+    transition: color .1s ease-in;
+
+}
+
+#play:active,#close:active{
+
+    color: white;
+
+    transition: color .1s ease-in;
 
 }
