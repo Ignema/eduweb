@@ -1,0 +1,17 @@
+{
+    "name": "Eduweb",
+    "short_name": "Eduweb",
+    "description": "Landing Page of an Educational Website",
+    "icons": [
+        {
+            "src": "assets/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }        
+    ],
+    "start_url": "/eduweb/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#fef2e6",
+    "theme_color": "#466265"
+}

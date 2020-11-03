@@ -1,4 +1,15 @@
 
+if(window.location.origin != "file://"){
+    navigator.serviceWorker.register('./sw.js', { scope: '/eduweb/' })
+    .then(function (registration)
+    {
+      console.log('Service worker registered successfully');
+    }).catch(function (e)
+    {
+      console.error('Error during service worker registration:', e);
+    });
+}
+
 const menu = document.getElementById("menu");
 
 const nav = document.getElementById("nav-list");
